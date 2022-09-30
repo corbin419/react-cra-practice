@@ -29,10 +29,10 @@ const Home = () => {
               </button>
             </a>
             <div className="Buttons">
-              <a href="#" id="Home-btn">
+              <a href="/#" id="Home-btn">
                 Contact Me
               </a>
-              <a href="#" id="Home-btn">
+              <a href="/#" id="Home-btn">
                 Download CV
               </a>
             </div>
