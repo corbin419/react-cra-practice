@@ -8,7 +8,7 @@ const Home = () => {
     <div className="HomePage" id="Home">
       <div className="inner-width">
         <div className="Content">
-          <h1>Hi I'm Corbin</h1>
+          <h1>Hi I'm </h1>
           <div className="Sm">
             <a
               href="https://github.com/corbin419"
@@ -28,6 +28,14 @@ const Home = () => {
                 <MdFacebook style={{ width: "25px", height: "25px" }} />
               </button>
             </a>
+            <div className="Buttons">
+              <a href="#" id="Home-btn">
+                Contact Me
+              </a>
+              <a href="#" id="Home-btn">
+                Download CV
+              </a>
+            </div>
           </div>
         </div>
       </div>

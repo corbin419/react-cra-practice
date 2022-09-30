@@ -13,20 +13,16 @@
   transition: 0.3s linear;
   /* border: solid 1px black; */
 }
-#Menu-Btn {
-  margin: 0;
-  padding: 0;
-  border: none;
-  background-color: #fff;
-  margin-left: 8px;
-  cursor: pointer;
-}
 .NavBar {
+  position: fixed;
   width: 100vw;
   height: 30px;
+  top: 0;
+  z-index: 999;
   margin: 0;
-  padding: 0;
-  background-color: rgba(70, 68, 85, 0.467);
+  padding: 30px 0;
+  background-color: transparent;
+  transition: 0.3s linear;
 }
 .inner-width {
   max-width: 1300px;
@@ -46,7 +42,74 @@
   position: relative;
   outline: none;
   z-index: 999;
+  display: none;
 }
 .Menu-togger span {
+  display: block;
+  height: 3px;
+  margin: 6px 0;
+  position: relative;
+  transition: 0.2s linear;
   background-color: #fff;
+}
+.Nav-Menu a {
+  margin: 0;
+  padding: 0;
+  margin-left: 16px;
+  cursor: pointer;
+  color: #fff;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+}
+.Nav-Menu a:hover {
+  color: black !important;
+}
+/* .sticky{
+  background-color: #fff;
+  padding: 18px 0;
+}
+.sticky .Logo{
+  background-image: url();
+}
+.sticky .Nav-Menu a{
+  color: black;
+}
+.sticky .Menu-togger span{
+  background-color: black;
+} */
+@media screen and (max-width: 980px) {
+  .Menu-togger {
+    display: block;
+  }
+  .Nav-Menu {
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    background-color: #353b48;
+    top: 0;
+    right: -100%;
+    max-width: 400px;
+    padding: 80px 50px;
+    transition: 0.3s linear;
+  }
+  .Nav-Menu a {
+    display: block;
+    font-size: 30px;
+    margin: 30px 0;
+  }
+  .Nav-Menu.active {
+    right: 0;
+  }
+  .Menu-togger.active span:nth-child(1) {
+    transform: rotate(-45deg);
+    top: 4px;
+  }
+  .Menu-togger.active span:nth-child(2) {
+    opacity: 0;
+  }
+  .Menu-togger.active span:nth-child(3) {
+    transform: rotate(45deg);
+    bottom: 14px;
+  }
 }

@@ -1,29 +1,47 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "../CSS/NavBar.css";
+// import Logo from "../Images/Logo.png";
 
 const NavBar = () => {
+  const [Menu, setMenu] = useState("Menu-togger");
+  const [NavMenu, setNavMenu] = useState("Nav-Menu");
+  const [isMenuopen, setIsMenuopen] = useState(false);
+
+  const MenuClick = () => {
+    if (!isMenuopen) {
+      setMenu("Menu-togger active");
+      setNavMenu("Nav-Menu active");
+    } else {
+      setMenu("Menu-togger");
+      setNavMenu("Nav-Menu ");
+    }
+    setIsMenuopen(!isMenuopen);
+  };
+
   return (
     <nav className="NavBar">
       <div className="inner-width">
-        <button href="/" className="Logo"></button>
-        <button className="Menu-togger">
+        <a href="/" className="Logo">
+          Corbin's Web
+        </a>
+        <button className={Menu} onClick={MenuClick}>
           <span></span>
           <span></span>
           <span></span>
         </button>
-        <div className="Nav-Menu">
-          <button href="#" id="Menu-Btn">
+        <div className={NavMenu}>
+          <a href="#" id="Menu-Btn">
             Home
-          </button>
-          <button href="#" id="Menu-Btn">
+          </a>
+          <a href="#" id="Menu-Btn">
             About Me
-          </button>
-          <button href="#" id="Menu-Btn">
+          </a>
+          <a href="#" id="Menu-Btn">
             Works
-          </button>
-          <button href="#" id="Menu-Btn">
+          </a>
+          <a href="#" id="Menu-Btn">
             Contact
-          </button>
+          </a>
         </div>
       </div>
     </nav>
