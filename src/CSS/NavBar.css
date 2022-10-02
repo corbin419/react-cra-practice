@@ -66,19 +66,19 @@
 .Nav-Menu a:hover {
   color: black !important;
 }
-/* .sticky {
+.sticky {
   background-color: #fff;
   padding: 18px 0;
 }
 .sticky .Logo {
-  background-image: url();
+  /* background-image: url(); */
 }
 .sticky .Nav-Menu a {
   color: black;
 }
 .sticky .Menu-togger span {
   background-color: black;
-} */
+}
 @media screen and (max-width: 980px) {
   .Menu-togger {
     display: block;

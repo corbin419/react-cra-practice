@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import "../CSS/NavBar.css";
 // import Logo from "../Images/Logo.png";
+import { useScrollPosition } from "../Hooks/useScrollPosition";
 
 const NavBar = () => {
   const [Menu, setMenu] = useState("Menu-togger");
   const [NavMenu, setNavMenu] = useState("Nav-Menu");
   const [isMenuopen, setIsMenuopen] = useState(false);
-  // const [NavBar, setNavBar] = useState("NavBar");
-  // const [isSticky, setIsSticky] = useState(false);
+  const [NavBar, setNavBar] = useState("NavBar");
 
   const MenuClick = () => {
     if (!isMenuopen) {
@@ -19,19 +19,22 @@ const NavBar = () => {
     }
     setIsMenuopen(!isMenuopen);
   };
+  const scrollPosition = useScrollPosition();
 
-  // const Scroll = () => {
-  //   if (window.scrollY > 20) {
-  //     setNavBar("NavBar sticky");
-  //   } else {
-  //     setNavBar("NavBar");
-  //   }
-  //   setIsSticky(!isSticky);
-  //   console.log("123");
-  // };
+  const scroll = () => {
+    if (scrollPosition > 0) {
+      setNavBar("NavBar sticky");
+      setNavMenu("NavBar-Menu sticky");
+      setMenu("Menu-togger sticky");
+    } else {
+      setNavBar("NavBar");
+      setMenu("Menu-togger");
+      setNavMenu("Nav-Menu ");
+    }
+  };
 
   return (
-    <nav className="NavBar">
+    <nav className={NavBar} onScroll={scroll}>
       <div className="inner-width">
         <a href="/" className="Logo">
           Corbin's Web
