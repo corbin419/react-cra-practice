@@ -4,7 +4,7 @@ import HDME from "../Images/HDme.JPG";
 
 const About = () => {
   return (
-    <div className="About-Me" id="About">
+    <div className="About-Me" id="AboutMe">
       <div className="inner-width">
         <div className="section-title">About</div>
         <div className="About-content">
@@ -13,6 +13,7 @@ const About = () => {
               src={HDME}
               alt="Me"
               style={{ width: "200px", height: "200px" }}
+              className="MyPhoto"
             />
           </div>
           <div className="About-text">

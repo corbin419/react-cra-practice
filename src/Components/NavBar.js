@@ -1,40 +1,40 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "../CSS/NavBar.css";
 // import Logo from "../Images/Logo.png";
 import { useScrollPosition } from "../Hooks/useScrollPosition";
 
 const NavBar = () => {
-  const [Menu, setMenu] = useState("Menu-togger");
+  const [Menu, setMenu] = useState("Menu-toggler");
   const [NavMenu, setNavMenu] = useState("Nav-Menu");
-  const [isMenuopen, setIsMenuopen] = useState(false);
   const [NavBar, setNavBar] = useState("NavBar");
+  const [isMenuopen, setIsMenuopen] = useState(false);
 
   const MenuClick = () => {
     if (!isMenuopen) {
-      setMenu("Menu-togger active");
+      setMenu("Menu-toggler active");
       setNavMenu("Nav-Menu active");
     } else {
-      setMenu("Menu-togger");
-      setNavMenu("Nav-Menu ");
+      setMenu("Menu-toggler");
+      setNavMenu("Nav-Menu");
     }
     setIsMenuopen(!isMenuopen);
   };
   const scrollPosition = useScrollPosition();
 
-  const scroll = () => {
-    if (scrollPosition > 0) {
+  useEffect(() => {
+    if (scrollPosition > 900) {
       setNavBar("NavBar sticky");
-      setNavMenu("NavBar-Menu sticky");
-      setMenu("Menu-togger sticky");
+      setNavMenu("Nav-Menu sticky");
+      setMenu("Menu-toggler sticky");
     } else {
       setNavBar("NavBar");
-      setMenu("Menu-togger");
+      setMenu("Menu-toggler");
       setNavMenu("Nav-Menu ");
     }
-  };
+  }, [scrollPosition]);
 
   return (
-    <nav className={NavBar} onScroll={scroll}>
+    <nav className={NavBar}>
       <div className="inner-width">
         <a href="/" className="Logo">
           Corbin's Web
@@ -45,13 +45,13 @@ const NavBar = () => {
           <span></span>
         </button>
         <div className={NavMenu}>
-          <a href="/#" id="Menu-Btn">
+          <a href="/" id="Menu-Btn">
             Home
           </a>
-          <a href="/#" id="Menu-Btn">
+          <a href="#AboutMe" id="Menu-Btn">
             About Me
           </a>
-          <a href="/#" id="Menu-Btn">
+          <a href="/#Works" id="Menu-Btn">
             Works
           </a>
           <a href="/#" id="Menu-Btn">
