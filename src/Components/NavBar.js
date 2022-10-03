@@ -45,16 +45,16 @@ const NavBar = () => {
           <span></span>
         </button>
         <div className={NavMenu}>
-          <a href="/" id="Menu-Btn">
+          <a href="/#Home" id="Menu-Btn">
             Home
           </a>
-          <a href="#AboutMe" id="Menu-Btn">
+          <a href="/#AboutMe" id="Menu-Btn">
             About Me
           </a>
           <a href="/#Works" id="Menu-Btn">
             Works
           </a>
-          <a href="/#" id="Menu-Btn">
+          <a href="/#Contact" id="Menu-Btn">
             Contact
           </a>
         </div>

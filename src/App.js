@@ -5,7 +5,9 @@ import About from "./Pages/About";
 import Skills from "./Pages/Skills";
 import Exp from "./Pages/Exp";
 import Works from "./Pages/Works";
-
+import Contact from "./Pages/Contact";
+import Footer from "./Pages/Footer";
+import GotoTop from "./Components/GotoTop";
 function App() {
   return (
     <div className="App">
@@ -15,6 +17,9 @@ function App() {
       <Skills />
       <Exp />
       <Works />
+      <Contact />
+      <Footer />
+      <GotoTop/>
     </div>
   );
 }
