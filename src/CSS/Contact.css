@@ -63,7 +63,7 @@
 .Contact-form input,
 .Contact-form textarea {
   width: 100%;
-  height: 20px;
+  height: 15px;
   margin: 10px 0;
   background-color: #353b48;
   border: none;
@@ -74,9 +74,9 @@
 }
 .NameZone,
 .EmailZone {
-  max-width: calc(45% - 10px);
+  max-width: calc(43% - 5px );
 }
-.MessageZone {
+.MessageZone {  
   min-height: 200px;
   resize: vertical;
 }
@@ -96,9 +96,12 @@
   background-color: #353b48;
   color: #fff;
 }
-@media screen and (min-width: 600px) {
+@media screen and (max-width:600px) {
   .NameZone,
   .EmailZone {
     width: 100%;
   }
 }
+@media screen and (max-width:980px) {
+}
+
