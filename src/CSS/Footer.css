@@ -1,20 +1,26 @@
-.Footer{
-    background-color: rgb(36, 37, 59);
-    color: aliceblue;
-    text-align: center;
+.Footer {
+  background-color: rgb(36, 37, 59);
+  color: aliceblue;
+  text-align: center;
 }
-.CopyRight{
-    margin-bottom: 20px;
-    font-size: 15px;
+.CopyRight {
+  margin-bottom: 20px;
+  font-size: 15px;
 }
-.CopyRight a{
-    font-size: 16px;
-    color: aquamarine;
-    font-weight: 500;
+.CopyRight a {
+  font-size: 16px;
+  color: aquamarine;
+  font-weight: 500;
 }
 .sm {
-    width: fit-content;
-    margin: 0 auto;
+  width: fit-content;
+  margin: 0 auto;
+  padding: 0;
+  /* border: solid 1px saddlebrown; */
+}
+.sm a{
+    color: #fff;
+    width: 25px;
     padding: 0;
-    /* border: solid 1px saddlebrown; */
-  }
+    margin-left: 4px;
+}
