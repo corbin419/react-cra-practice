@@ -65,10 +65,8 @@
   padding: 4px;
 }
 .Nav-Menu a:hover {
-  color: rgb(255, 255, 255) !important;
-  scale: 2.5;
-  border: 0.5px solid rgb(253, 253, 253);
-  border-radius: 5px;
+  color: rgb(115, 201, 255) !important;
+  /* border: 0.5px solid rgb(253, 253, 253); */
   transition: .2s linear;
 }
 .sticky {
