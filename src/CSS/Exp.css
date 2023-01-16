@@ -67,6 +67,11 @@
   color: #444;
   font-weight: 600;
 }
+.KPB{
+  margin: 0 auto;
+  text-align: justify;
+  width:fit-content;
+}
 @media screen and (max-width: 600px) {
   .Block {
     width: calc(100% - 20px);
