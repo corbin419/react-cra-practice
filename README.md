@@ -1,1 +1,2 @@
-React 個人網站練習
+React cra to vite practice
+
