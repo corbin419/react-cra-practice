@@ -1,6 +1,6 @@
 import React from "react";
 import "../CSS/About.css";
-import HDME from "../Images/HDme.JPG";
+import HDME from "../Images/HDme.png";
 
 const About = () => {
   return (
